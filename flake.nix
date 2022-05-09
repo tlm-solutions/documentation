@@ -12,7 +12,7 @@
     checks = packages;
     packages."${system}".dvb-dump-docs = package;
     defaultPackage."${system}" = package;
-    overlay = (final: prev: {
+    overlay."${system}" = (final: prev: {
       dvb-dump-docs = package;
     });
   };
