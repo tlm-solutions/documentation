@@ -151,12 +151,64 @@ Can only called by admin
 
 ## Create Regions
 
+You need to be administrator to call this endpoint
+
 **Request**
 
 ```json
     {
         "operation": "regions/create",
         body: {
+            "name": "dresden",
+            "frequency": 173000000,
+            "transport_company": "dresdner verkehrs betriebe",
+            "protocoll": ""
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "success": true
+    }
+```
+
+## Deleting Regions
+
+You need to be administrator to call this endpoint
+
+**Request**
+
+```json
+    {
+        "operation": "regions/delete",
+        body: {
+            "id": 0
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "success": true
+    }
+```
+
+## Modifing Regions
+
+You need to be adimistrator to call this endpoint
+
+**Request**
+
+```json
+    {
+        "operation": "regions/modify",
+        body: {
+            "id": 0,
             "name": "dresden",
             "frequency": 173000000,
             "transport_company": "dresdner verkehrs betriebe",
@@ -227,6 +279,54 @@ Returns all `regions`
         "success": true
     }
 ```
+
+
+## Modify Station
+
+**Request**
+
+```json
+    {
+        "operation": "station/modify",
+        "body": {
+            "id": 0
+            "name": "Dresden Station Pieschen",
+            "lat": 0.0,
+            "lon": 0.0,
+            "region": 0 # references to region 
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "success": true
+    }
+```
+
+## Delete Station
+
+**Request**
+
+```json
+    {
+        "operation": "station/delete",
+        "body": {
+            "id": 0
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "success": true
+    }
+```
+
 
 ## List Stations
 
