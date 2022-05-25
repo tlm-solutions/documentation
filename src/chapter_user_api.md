@@ -1,13 +1,16 @@
-# User API
+System Management API
+----------------------
 
 This is a websocket application. Your socket connection correspondes to your session.
+
+# User
 
 ## Register
 **Request**
 
 ```json
     {
-        "operation": "register",
+        "operation": "user/register",
         "body": {
             "name": "Max_Mustermann",
             "email": "ottonormal@gmx.de",
@@ -31,7 +34,7 @@ This is a websocket application. Your socket connection correspondes to your ses
 
 ```json
     {
-        "operation": "login",
+        "operation": "user/login",
         "body": {
             "name": "Max_Mustermann",
             "password": "high end secure"
@@ -46,19 +49,118 @@ This is a websocket application. Your socket connection correspondes to your ses
         "sucess": true
     }
 ```
+## Session
 
-## Create Station
+will return the user identifier.
 
 **Request**
 
 ```json
     {
-        "operation": "create_station",
+        "operation": "user/session",
+    }
+```
+
+**Response**
+
+```json
+    {
+        "id": "UUID" 
+    }
+```
+
+## Modifing Users
+
+**Request**
+
+```
+    {
+        "operation": "user/modify",
         "body": {
-            "name": "Dresden Station Pieschen",
-            "lat": 0.0,
-            "lon": 0.0,
-            "region": 0 # references to region 
+            "id": "UUID",
+            "name": "New Maxmustermann",
+            "email": "new_mail@protonmail.com",
+            "password": "new_password",
+            "role": 2
+        }
+    }
+```
+
+In order to make role updates you have to be administrator.
+
+**Response**
+
+```json
+    {
+        "sucess": true
+    }
+```
+
+## Deleting Users
+
+**Request**
+
+```
+    {
+        "operation": "user/delete",
+        "body": {
+            "id": "UUID"
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "sucess": true
+    }
+```
+
+## Listing Users
+
+Can only called by admin
+
+**Request**
+
+```
+    {
+        "operation": "user/list",
+    }
+```
+
+**Response**
+
+```json
+    {
+        "users": [
+            {
+                "id": "UUID",
+                "name": "New Maxmustermann",
+                "email": "new_mail@protonmail.com",
+                "password": "new_password",
+                "role": 2
+            }
+        ]
+    }
+```
+
+
+# Regions
+
+
+## Create Regions
+
+**Request**
+
+```json
+    {
+        "operation": "regions/create",
+        body: {
+            "name": "dresden",
+            "frequency": 173000000,
+            "transport_company": "dresdner verkehrs betriebe",
+            "protocoll": ""
         }
     }
 ```
@@ -80,7 +182,7 @@ Returns all `regions`
 
 ```json
     {
-        "operation": "list_regions"
+        "operation": "regions/list"
     }
 ```
 
@@ -100,13 +202,39 @@ Returns all `regions`
     }
 ```
 
+# Stations
+
+## Create Station
+
+**Request**
+
+```json
+    {
+        "operation": "station/create",
+        "body": {
+            "name": "Dresden Station Pieschen",
+            "lat": 0.0,
+            "lon": 0.0,
+            "region": 0 # references to region 
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "success": true
+    }
+```
+
 ## List Stations
 
 **Request**
 
 ```json
     {
-        "operation": "list_stations",
+        "operation": "stations/list",
         "body": {
             "owner": "UUID", # optional
             "region": 0 # optional
