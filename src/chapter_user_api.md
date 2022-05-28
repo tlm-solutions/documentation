@@ -71,6 +71,8 @@ will return the user identifier.
 
 ## Modifing Users
 
+If you want to change the role you hae to be an admin.
+
 **Request**
 
 ```
@@ -98,6 +100,8 @@ In order to make role updates you have to be administrator.
 
 ## Deleting Users
 
+Admin user or the user them self.
+
 **Request**
 
 ```
@@ -119,7 +123,7 @@ In order to make role updates you have to be administrator.
 
 ## Listing Users
 
-Can only called by admin
+Can only be called by a admin
 
 **Request**
 
@@ -283,28 +287,8 @@ Returns all `regions`
 
 ## Modify Station
 
-**Request**
+Delete the station and create a new one.
 
-```json
-    {
-        "operation": "station/modify",
-        "body": {
-            "id": 0
-            "name": "Dresden Station Pieschen",
-            "lat": 0.0,
-            "lon": 0.0,
-            "region": 0 # references to region 
-        }
-    }
-```
-
-**Response**
-
-```json
-    {
-        "success": true
-    }
-```
 
 ## Delete Station
 
