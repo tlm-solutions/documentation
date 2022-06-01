@@ -136,17 +136,15 @@ Can only be called by a admin
 **Response**
 
 ```json
-    {
-        "users": [
-            {
-                "id": "UUID",
-                "name": "New Maxmustermann",
-                "email": "new_mail@protonmail.com",
-                "password": "new_password",
-                "role": 2
-            }
-        ]
-    }
+    [
+        {
+            "id": "UUID",
+            "name": "New Maxmustermann",
+            "email": "new_mail@protonmail.com",
+            "password": "new_password",
+            "role": 2
+        }
+    ]
 ```
 
 
@@ -161,7 +159,7 @@ You need to be administrator to call this endpoint
 
 ```json
     {
-        "operation": "regions/create",
+        "operation": "region/create",
         body: {
             "name": "dresden",
             "frequency": 173000000,
@@ -187,7 +185,7 @@ You need to be administrator to call this endpoint
 
 ```json
     {
-        "operation": "regions/delete",
+        "operation": "region/delete",
         body: {
             "id": 0
         }
@@ -210,7 +208,7 @@ You need to be adimistrator to call this endpoint
 
 ```json
     {
-        "operation": "regions/modify",
+        "operation": "region/modify",
         body: {
             "id": 0,
             "name": "dresden",
@@ -238,24 +236,22 @@ Returns all `regions`
 
 ```json
     {
-        "operation": "regions/list"
+        "operation": "region/list"
     }
 ```
 
 **Response**
 
 ```json
-    {
-        "regions": [
-            {
-                "id": 0,
-                "name": "dresden",
-                "frequency": 173000000,
-                "transport_company": "dresdner verkehrs betriebe",
-                "protocoll": ""
-            }
-        ];
-    }
+    [
+        {
+            "id": 0,
+            "name": "dresden",
+            "frequency": 173000000,
+            "transport_company": "dresdner verkehrs betriebe",
+            "protocoll": ""
+        }
+    ]
 ```
 
 # Stations
@@ -318,7 +314,7 @@ Delete the station and create a new one.
 
 ```json
     {
-        "operation": "stations/list",
+        "operation": "station/list",
         "body": {
             "owner": "UUID", # optional
             "region": 0 # optional
@@ -330,18 +326,16 @@ if `owner` and `region` is set those will be used as filter.
 **Response**
 
 ```json
-    {
-        "stations": [
-            {
-                "id": 0,
-                "name": "Dresden Pieschen",
-                "lat": 51.08106, 
-                "lon": 13.72806,
-                "region": 0, # reference to region with id 0
-                "owner": "UUID" # reference to user with this id
-            }
-        ];
-    }
+     [
+        {
+            "id": 0,;
+            "name": "Dresden Pieschen",
+            "lat": 51.08106, 
+            "lon": 13.72806,
+            "region": 0, # reference to region with id 0
+            "owner": "UUID" # reference to user with this id
+        }
+    ]
 ```
 
 
