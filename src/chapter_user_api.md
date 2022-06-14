@@ -23,7 +23,8 @@ This is a websocket application. Your socket connection correspondes to your ses
 
 ```json
     {
-        "sucess": true
+        "sucess": true,
+        "id": "UUID"
     }
 ```
 
@@ -46,7 +47,8 @@ This is a websocket application. Your socket connection correspondes to your ses
 
 ```json
     {
-        "sucess": true
+        "sucess": true,
+        "id": "UUID"
     }
 ```
 ## Session
@@ -160,7 +162,7 @@ You need to be administrator to call this endpoint
 ```json
     {
         "operation": "region/create",
-        body: {
+        "body": {
             "name": "dresden",
             "frequency": 173000000,
             "transport_company": "dresdner verkehrs betriebe",
@@ -186,7 +188,7 @@ You need to be administrator to call this endpoint
 ```json
     {
         "operation": "region/delete",
-        body: {
+        "body": {
             "id": 0
         }
     }
@@ -209,7 +211,7 @@ You need to be adimistrator to call this endpoint
 ```json
     {
         "operation": "region/modify",
-        body: {
+        "body": {
             "id": 0,
             "name": "dresden",
             "frequency": 173000000,
@@ -276,7 +278,8 @@ Returns all `regions`
 
 ```json
     {
-        "success": true
+        "success": true,
+        "id": "UUID"
     }
 ```
 
