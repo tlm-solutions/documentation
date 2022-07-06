@@ -4,7 +4,7 @@
   };
 
   outputs = { self, nixpkgs, ... }:
-  let 
+  let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages."${system}";
       package = pkgs.callPackage ./derivation.nix { };
@@ -12,7 +12,7 @@
     checks = packages;
     packages."${system}".dvb-dump-docs = package;
     defaultPackage."${system}" = package;
-    overlay."${system}" = (final: prev: {
+    overlays.default = (final: prev: {
       dvb-dump-docs = package;
     });
   };
