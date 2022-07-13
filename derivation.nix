@@ -1,4 +1,4 @@
-{ lib, stdenv, mdbook }:
+{ lib, stdenv, mdbook, mdbook-mermaid }:
 
 stdenv.mkDerivation {
   pname = "dvb-dump-docs";
@@ -6,9 +6,10 @@ stdenv.mkDerivation {
 
   src = ./.;
 
-  nativeBuildInputs = [ mdbook ];
+  nativeBuildInputs = [ mdbook mdbook-mermaid ];
   
   buildPhase = ''
+    ${mdbook-mermaid}/bin/mdbook-mermaid install
     ${mdbook}/bin/mdbook build
   '';
 
