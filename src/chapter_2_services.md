@@ -13,13 +13,13 @@ flowchart TB
     telegram-decoder -.->|HTTP Post| data-accumulator
 
     subgraph data-hoarder
-    data-accumulator -->|gRPC| funnel --> |WebSocket|windshield
-    data-accumulator --> |gRPC| dvb-api --> |REST|windshield
+    data-accumulator --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/proto/telegram.proto'>gRPC</a>| funnel --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/src/models/r09.rs'>WebSocket</a>|windshield
+    data-accumulator --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/proto/telegram.proto'>gRPC</a>| dvb-api --> |<a href='chapter_2_1_api.html'>REST</a>|windshield
     data-accumulator --> postgres-telegrams
     postgres-telegrams --> grafana
-    data-accumulator <--> postgres-dvbdump <--> clicky-bunty-server <-->|WebSocket| click[click]
-    postgres-telegrams[Postgres `telegrams`]
-    postgres-dvbdump[Postgres `dvbdump`]
+    data-accumulator <--> postgres-dvbdump <--> clicky-bunty-server <-->|<a href='chapter_2_2_user_api.html'>WebSocket</a>| click[click]
+    postgres-telegrams[(Postgres `telegrams`)]
+    postgres-dvbdump[(Postgres `dvbdump`)]
     dvb-api[api]
     end
 
