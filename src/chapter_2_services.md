@@ -13,15 +13,29 @@ flowchart TB
     telegram-decoder -.->|HTTP Post| data-accumulator
 
     subgraph data-hoarder
-    data-accumulator --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/proto/telegram.proto'>gRPC</a>| funnel --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/src/models/r09.rs'>WebSocket</a>|windshield
-    data-accumulator --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/proto/telegram.proto'>gRPC</a>| dvb-api --> |<a href='chapter_2_1_api.html'>REST</a>|windshield
+    data-accumulator --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/proto/telegram.proto'>gRPC</a>| dvb-api
+		dvb-api --> |<a href='chapter_2_1_api.html'>REST</a>|windshield
+		funnel --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/src/models/r09.rs'>WebSocket</a>|windshield
+    data-accumulator --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/proto/telegram.proto'>gRPC</a>| funnel
     data-accumulator --> postgres-telegrams
     postgres-telegrams --> grafana
     data-accumulator <--> postgres-dvbdump <--> clicky-bunty-server <-->|<a href='chapter_2_2_user_api.html'>WebSocket</a>| click[click]
+
+		stopsjson -.-> dvb-api
+		stopsjson -.-> funnel
+		graphjson -.-> dvb-api
+
     postgres-telegrams[(Postgres `telegrams`)]
     postgres-dvbdump[(Postgres `dvbdump`)]
     dvb-api[api]
+		graphjson[(graph.json)]
+		stopsjson[(stops.json)]
     end
+
+		user[/User\]
+		grafana <-.- |<a href='https://monitoring.dvb.solutions'>HTTP</a>|user
+		windshield <-.- |<a href='https://map.dvb.solutions'>HTTP</a>|user
+		click[click] <-.- |<a href='https://click.dvb.solutions'>HTTP</a>|user
 
     click hardware-filter "https://github.com/dump-dvb/bandpass-filter" _blank
     click telegram-decoder "https://github.com/dump-dvb/decode-server" _blank
