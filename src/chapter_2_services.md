@@ -22,7 +22,6 @@ flowchart TB
     data-accumulator <--> postgres-dvbdump <--> clicky-bunty-server <-->|<a href='chapter_2_2_user_api.html'>WebSocket</a>| click[click]
 
 		stopsjson -.-> dvb-api
-		stopsjson -.-> funnel
 		graphjson -.-> dvb-api
 
     postgres-telegrams[(Postgres `telegrams`)]
