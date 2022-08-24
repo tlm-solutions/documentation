@@ -73,7 +73,7 @@ will return the user identifier.
 
 ## Modifing Users
 
-If you want to change the role you hae to be an admin.
+If you want to change the role you have to be an admin.
 
 **Request**
 
@@ -102,7 +102,7 @@ In order to make role updates you have to be administrator.
 
 ## Deleting Users
 
-Admin user or the user them self.
+Only Admins can permanently delete users. If a user doesn't participate in the project he should instead deactivate his account.
 
 **Request**
 
@@ -111,6 +111,30 @@ Admin user or the user them self.
         "operation": "user/delete",
         "body": {
             "id": "UUID"
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "sucess": true
+    }
+```
+
+## Deactivating Users
+
+Only Admins and the effected user can call this endpoint. This point is for activating or deactivating user accounts.
+
+**Request**
+
+```
+    {
+        "operation": "user/deactivate",
+        "body": {
+            "id": "UUID",
+            "deactivated": true
         }
     }
 ```
@@ -291,13 +315,16 @@ Delete the station and create a new one.
 
 ## Delete Station
 
+Only Administrators can permanently delete stations if you are a user and want to deactivate yours consider using
+`station/deactivate`.
+
 **Request**
 
 ```json
     {
         "operation": "station/delete",
         "body": {
-            "id": 0
+            "id": "UUID"
         }
     }
 ```
@@ -310,6 +337,29 @@ Delete the station and create a new one.
     }
 ```
 
+## Deactivating a Station
+
+Only Administrators and the owner can deactivate stations.
+
+**Request**
+
+```json
+    {
+        "operation": "station/delete",
+        "body": {
+            "id": "UUID",
+            deactivated: true
+        }
+    }
+```
+
+**Response**
+
+```json
+    {
+        "success": true
+    }
+```
 
 ## List Stations
 
