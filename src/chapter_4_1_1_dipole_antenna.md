@@ -12,8 +12,8 @@ The antenna is constructed using following parts:
 | PL259 to BNC adapter  | 1x    |                                                                                              | [https://www.ebay.de/itm/384868148089](https://www.ebay.de/itm/384868148089) |
 | 50Ω BNC cable         | 1x    |                                                                                              |      |
 | hollow brass rods     | 1x    | any solderable hollow rod would work, this one is 5mm OD. 3D files may need adjustment       | [https://www.hornbach.de/shop/Messing-Rundrohr-aussen-5-0-mm-innen-4-1-mm-Laenge-1000-mm/6178978/artikel.html](https://www.hornbach.de/shop/Messing-Rundrohr-aussen-5-0-mm-innen-4-1-mm-Laenge-1000-mm/6178978/artikel.html) |
-| `center_part.slvs`    | 1x    | 3d printed part, adjust hole size for your metal rods                                        |      |
-| `end_cap.slvs`        | 2x    | 3d printed part                                                                              |      |
+| `center_part.slvs`    | 1x    | 3d printed part, adjust hole size for your metal rods                                        | [center_part.stl](https://github.com/dump-dvb/antenna-guide/blob/master/dipole-antenna/center_part.stl) |
+| `end_cap.slvs`        | 2x    | 3d printed part                                                                              | [end_cap.stl](https://github.com/dump-dvb/antenna-guide/blob/master/dipole-antenna/end_cap.stl) |
 
 `center_part.slvs` is the Solvespace file for center part connecting of the antenna holding everything together.
 
