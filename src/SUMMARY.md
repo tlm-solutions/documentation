@@ -3,6 +3,8 @@
 - [Introduction](./chapter_1_introduction.md)
 - [Contribute](./chapter_2_contribute.md)
 - [Data Providers and Regions](./chapter_3_data_providers.md)
+    - [Finding the Frequency](./chapter_3_1_finding_frequencies.md)
+    - [Map your Region](./chapter_3_2_map_region.md)
 - [Building a Receiver](./chaper_4_building_a_receiver.md)
   - [Hardware Overview](./chapter_4_1_hardware_overview.md)
   - [Antenna Guide](./chapter_4_2_antenna_guide.md)
