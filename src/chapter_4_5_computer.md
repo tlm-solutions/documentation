@@ -7,17 +7,14 @@ If any problems with some devices occur please report them [here](https://github
 - **any x86 64bit thin clients**
 - **nixos compatible**
 
-Devices listed below are actively **tested** and run in **production**:
+Devices listed below are actively **tested** and run in **production** if you have devices running
+not listed here please report them to us so we can expand this list.
 
-### DELL Wyse 3040
-
-**Product Page** can be found [here](https://www.dell.com/support/home/en-us/product-support/product/wyse-3040-thin-client/overview)
-
-Works absolutely fabolus and is probably the cheapest on this list but sadly discontinued by dell.
-
-### Raspberry Pi 3b and 4
-
-Probably everybody has one at home has enough resources to work but redeployment is a little bit scary. Furthermore there is a nice POE-Hat (Power over Ethernet) for PI 3B+ and 4.
+|device name|architecture|notes|working|
+|-----------|------------|-----|-------|
+|Dell Wyse 3040|x86_64| insanely cheap, standard device we use | ✅|
+|Raspberry Pi 3B+| aarch64| resolvable problems with bootloader on nixos | ✅|
+|Raspberry Pi 4| aarch64| very nice with POE hat | ✅|
 
 ## Devices we discourage from using
 
