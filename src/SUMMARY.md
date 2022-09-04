@@ -4,6 +4,7 @@
 - [Services and Dataflow](./chapter_2_services.md)
   - [API Documentation](./chapter_2_1_api.md)
   - [User API](./chapter_2_2_user_api.md)
+  - [Nixos Options](./chapter_2_3_nixos_options.md)
 - [Data Providers](./chapter_3_data_providers.md)
 - [Hardware Overview](./chaper_4_hardware_overview.md)
   - [Antenna Guide](./chapter_4_1_antenna_guide.md)
