@@ -1,6 +1,6 @@
 # Hardware Overview
 
-[fully assembled receiver](../resources/assembled_box.jpg)
+![fully assembled receiver](../resources/assembled_box.jpg)
 
 In the image above you can see a fully assembled receiver that runs in production in dresden.
 Let's talk about the components individuelly.

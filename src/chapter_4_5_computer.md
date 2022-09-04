@@ -1,6 +1,13 @@
 # Single Board Computer
 
-Devices that are tested and run in production:
+If any problems with some devices occur please report them [here](https://github.com/dump-dvb/dump-dvb.nix/issues).
+
+## Devices we recommend using.
+
+- **any x86 64bit thin clients**
+- **nixos compatible**
+
+Devices listed below are actively **tested** and run in **production**:
 
 ### DELL Wyse 3040
 
