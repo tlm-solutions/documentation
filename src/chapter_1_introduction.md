@@ -11,7 +11,7 @@ hopefully everything is documented for newcomers and supporters.
 - [Landing Page](https://dvb.solutions)
 - [Live Map](https://map.dvb.solutions)
 - [Managment Board](https://click.dvb.solutions)
-- [Monitoring](https://monitroing.dvb.solutions)
+- [Monitoring](https://monitoring.dvb.solutions)
 
 ## Table of Contents
 
