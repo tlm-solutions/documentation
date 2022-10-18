@@ -1,6 +1,6 @@
 # Dump DVB
 
-**Contact:** <dump@dvb.solutions>
+**Contact:** <dump@dvb.solutions> **Chat with us on Matrix!** <https://matrix.to/#/#dump-dvb:matrix.org>
 
 Welcome to our high quality TM enterprise documentation where 
 hopefully everything is documented for newcomers and supporters.
@@ -10,7 +10,7 @@ hopefully everything is documented for newcomers and supporters.
 - [Github](https://github.com/dump-dvb)
 - [Landing Page](https://dvb.solutions)
 - [Live Map](https://map.dvb.solutions)
-- [Managment Board](https://click.dvb.solutions)
+- [Management Board](https://click.dvb.solutions)
 - [Monitoring](https://monitoring.dvb.solutions)
 
 ## Table of Contents
