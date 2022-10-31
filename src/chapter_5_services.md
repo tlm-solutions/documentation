@@ -17,14 +17,12 @@ flowchart TB
 		dvb-api --> |<a href='chapter_2_1_api.html'>REST</a>|windshield
 		funnel --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/src/models/r09.rs'>WebSocket</a>|windshield
     data-accumulator --> |<a href='https://github.com/dump-dvb/telegrams/blob/master/proto/telegram.proto'>gRPC</a>| funnel
-    data-accumulator --> postgres-telegrams
-    postgres-telegrams --> grafana
+    postgres-dvbdump --> grafana
     data-accumulator <--> postgres-dvbdump <--> clicky-bunty-server <-->|<a href='chapter_2_2_user_api.html'>WebSocket</a>| click[click]
 
 		stopsjson -.-> dvb-api
 		graphjson -.-> dvb-api
 
-    postgres-telegrams[(Postgres `telegrams`)]
     postgres-dvbdump[(Postgres `dvbdump`)]
     dvb-api[api]
 		graphjson[(graph.json)]
