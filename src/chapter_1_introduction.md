@@ -20,7 +20,7 @@ hopefully everything is documented for newcomers and supporters.
 - [Data Providers and Regions](./chapter_3_data_providers.md)
     - [Finding the Frequency](./chapter_3_1_finding_frequencies.md)
     - [Map your Region](./chapter_3_2_map_region.md)
-- [Building a Receiver](./chaper_4_building_a_receiver.md)
+- [Building a Receiver](./chapter_4_building_a_receiver.md)
   - [Antenna Guide](./chapter_4_1_antenna_guide.md)
 	  - [Dipole Antenna Guide](./chapter_4_1_1_dipole_antenna.md)
   - [Hardware Filter](./chapter_4_2_hardware_filter.md)
