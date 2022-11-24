@@ -5,7 +5,7 @@
 In the image above you can see a fully assembled receiver that runs in production in dresden.
 Let's talk about the components individually.
 
-- [Antenna Guide](./chapter_4_2_antenna_guide.md)
+- [Antenna Guide](./chapter_4_1_antenna_guide.md)
   - [Dipole Antenna Guide](./chapter_4_1_1_dipole_antenna.md)
 - [Hardware Filter](./chapter_4_2_hardware_filter.md)
 - [Radio (SDR)](./chapter_4_3_radio.md)
